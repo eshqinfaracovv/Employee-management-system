@@ -1,0 +1,44 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\assets\bootstrap-5.0.2\bootstrap-5.0.2\.github\CODEOWNERS" />
+    <None Include="wwwroot\assets\bootstrap-5.0.2\bootstrap-5.0.2\.github\CONTRIBUTING.md" />
+    <None Include="wwwroot\assets\bootstrap-5.0.2\bootstrap-5.0.2\.github\dependabot.yml" />
+    <None Include="wwwroot\assets\bootstrap-5.0.2\bootstrap-5.0.2\.github\ISSUE_TEMPLATE\bug_report.md" />
+    <None Include="wwwroot\assets\bootstrap-5.0.2\bootstrap-5.0.2\.github\ISSUE_TEMPLATE\config.yml" />
+    <None Include="wwwroot\assets\bootstrap-5.0.2\bootstrap-5.0.2\.github\ISSUE_TEMPLATE\feature_request.md" />
+    <None Include="wwwroot\assets\bootstrap-5.0.2\bootstrap-5.0.2\.github\release-drafter.yml" />
+    <None Include="wwwroot\assets\bootstrap-5.0.2\bootstrap-5.0.2\.github\SUPPORT.md" />
+    <None Include="wwwroot\assets\bootstrap-5.0.2\bootstrap-5.0.2\.github\workflows\browserstack.yml" />
+    <None Include="wwwroot\assets\bootstrap-5.0.2\bootstrap-5.0.2\.github\workflows\bundlewatch.yml" />
+    <None Include="wwwroot\assets\bootstrap-5.0.2\bootstrap-5.0.2\.github\workflows\codeql.yml" />
+    <None Include="wwwroot\assets\bootstrap-5.0.2\bootstrap-5.0.2\.github\workflows\css.yml" />
+    <None Include="wwwroot\assets\bootstrap-5.0.2\bootstrap-5.0.2\.github\workflows\docs.yml" />
+    <None Include="wwwroot\assets\bootstrap-5.0.2\bootstrap-5.0.2\.github\workflows\js.yml" />
+    <None Include="wwwroot\assets\bootstrap-5.0.2\bootstrap-5.0.2\.github\workflows\lint.yml" />
+    <None Include="wwwroot\assets\bootstrap-5.0.2\bootstrap-5.0.2\.github\workflows\node-sass.yml" />
+    <None Include="wwwroot\assets\bootstrap-5.0.2\bootstrap-5.0.2\.github\workflows\release-notes.yml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="7.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.5" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,48 @@
+﻿@using management.Employees.ViewModels
+
+
+@model List<ListViewModel>
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+
+<div class="container">
+    <div class="row justify-content-end">
+        <div class="">
+            <a asp-route="Employee-Add" target="_blank" class="btn btn-secondary">Add new book</a>
+           
+        </div>
+    </div>
+    <div class="row mt-3">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">LastName</th>
+                    <th scope="col">FatherName</th>
+                    <th scope="col">CreatedAt</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var employee in Model)
+                {
+                    if (employee.IsDeleted)
+                    {
+                        continue;
+                    }
+                    <tr>
+                        <th scope="row">@employee.Name</th>
+                        <td>@employee.LastName</td>
+                        <td>@employee.FatherName</td>
+                       
+                          <td>@employee.CreatedAt</td>
+                        <td class="d-flex justify-content-between">
+                            @*<a asp-route="enbook-details" asp-route-id="@book.id" class="col-3 btn btn-primary">details</a>
+                            <a asp-route="book-update-id" asp-route-id="@book.id" class="col-3 btn btn-secondary">update</a>*@
+                            <a asp-route="Employee-Delete-id" asp-route-id="@employee.id" class="col-3 btn btn-danger">delete</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
