@@ -1,0 +1,35 @@
+﻿@using management.Employees.ViewModels
+@model UpdateViewModel
+
+
+<div class="container">
+    <div class="row justify-content-end">
+        <div class="">
+            <a asp-route="employee-List" target="_blank" class="btn btn-secondary">Employees</a>
+        </div>
+    </div>
+    <form method="POST" asp-controller="Employee" asp-action="update">
+        <input asp-for="EmployeeCode" type="hidden" />
+        <div class="form-group">
+            <label asp-for="Name"></label>
+            <input asp-for="Name" class="form-control">
+        </div>
+        <div class="form-group">
+            <label asp-for="LastName"></label>
+            <input asp-for="LastName" class="form-control">
+        </div>
+        <div class="form-check">
+            <label asp-for="FatherName"></label>
+            <input asp-for="FatherName" class="form-control">
+        </div>
+        <div class="form-check">
+            <label asp-for="Email"></label>
+            <input asp-for="Email" class="form-control">
+        </div>
+         <div class="form-check">
+            <label asp-for="FINCode"></label>
+            <input asp-for="FINCode" class="form-control">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>

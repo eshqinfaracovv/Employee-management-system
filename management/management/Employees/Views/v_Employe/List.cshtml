@@ -1,9 +1,4 @@
-﻿@using management.Employees.ViewModels
-
-
-@model List<ListViewModel>
-@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
-
+﻿
 
 <div class="container">
     <div class="row justify-content-end">
@@ -33,12 +28,12 @@
                         <th scope="row">@employee.Name</th>
                         <td>@employee.LastName</td>
                         <td>@employee.FatherName</td>
-                       
                           <td>@employee.CreatedAt</td>
+
                         <td class="d-flex justify-content-between">
-                            @*<a asp-route="enbook-details" asp-route-id="@book.id" class="col-3 btn btn-primary">details</a>
-                            <a asp-route="book-update-id" asp-route-id="@book.id" class="col-3 btn btn-secondary">update</a>*@
-                            <a asp-route="Employee-Delete-id" asp-route-id="@employee.id" class="col-3 btn btn-danger">delete</a>
+                        @*    <a asp-route="enbook-details" asp-route-id="@book.id" class="col-3 btn btn-primary">details</a>*@
+                            <a asp-route="Employee-update-id" asp-route-EmployeeCode="@employee.EmployeCode" class="col-3 btn btn-secondary">update</a>
+                            <a  asp-route="Employee-Delete-id" asp-route-EmployeeCode="@employee.EmployeCode"  class="col-3 btn btn-danger">Delete</a>
                         </td>
                     </tr>
                 }
