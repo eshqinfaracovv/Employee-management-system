@@ -1,4 +1,7 @@
-﻿namespace management.Employees.ViewModels
+﻿using management.Utilities;
+using System.ComponentModel.DataAnnotations;
+
+namespace management.Employees.ViewModels
 {
     public class AddViewModel  /*BaseViewModel*/
     {
@@ -16,7 +19,9 @@
         public string Name { get; set; }
         public string LastName { get; set; }
         public string FatherName { get; set; }
+        
         public string Email { get; set; }
+        [ValidFINcodeAttribute]
         public string FINCode { get; set; }
 
         public AddViewModel(string name,string lastname,string fathername,string email,string fincode)

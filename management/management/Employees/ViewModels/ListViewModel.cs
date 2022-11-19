@@ -25,6 +25,7 @@
         public ListViewModel(string emloyecode, string name, string lastName, string fatherName, DateTime createdAt, bool soft)
         {
             EmployeCode = emloyecode;
+      
             Name = name;
             LastName = lastName;
             FatherName = fatherName;
