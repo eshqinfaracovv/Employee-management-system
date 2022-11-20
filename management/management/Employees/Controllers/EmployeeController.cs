@@ -43,12 +43,12 @@ namespace management.Employees.Controllers
 
             context.Employees.Add(new Employee
             {
+                EmployeeCode = TableAutoGenerateEmployeeCode.RandomEmpCode,
                 Name = Employee.Name,
                 LastName = Employee.LastName,
                 FINCode = Employee.FINCode,
                 Email = Employee.Email,
                 FatherName = Employee.FatherName,
-                EmployeeCode = TableAutoGenerateEmployeeCode.RandomEmpCode,
             });
             context.SaveChanges();
             return RedirectToRoute("Employee-list");
@@ -99,7 +99,10 @@ namespace management.Employees.Controllers
             {
                 return NotFound();
             }
-
+            if (!ModelState.IsValid)
+            {
+                return View("~/employees/Views/v_Employe/Update.cshtml",model);
+            }
 
             Employee.Name = model.Name;
             Employee.LastName = model.LastName;

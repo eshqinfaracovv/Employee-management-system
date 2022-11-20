@@ -10,16 +10,10 @@ namespace management.Utilities
         {
          string fin=value.ToString();
            
-            if (Regex.IsMatch(fin, @"^[A-Z0-9]{0,7}$"))
+            if (Regex.IsMatch(fin, @"^[A-Z0-9]{7}$"))
             {
-                
-             
-
-                return ValidationResult.Success;
-          
-            }
-           
-      
+                    return ValidationResult.Success;
+                }
             return new ValidationResult("FinCode Is Not Correct");
         }
 

@@ -13,22 +13,31 @@
         <div class="form-group">
             <label asp-for="Name"></label>
             <input asp-for="Name" class="form-control">
+            <span asp-validation-for="Name" class="text-danger"></span>
+
         </div>
         <div class="form-group">
             <label asp-for="LastName"></label>
             <input asp-for="LastName" class="form-control">
+            <span asp-validation-for="LastName" class="text-danger"></span>
+
         </div>
-        <div class="form-check">
+        <div class="form-group">
             <label asp-for="FatherName"></label>
             <input asp-for="FatherName" class="form-control">
+            <span asp-validation-for="FatherName" class="text-danger"></span>
+
         </div>
-        <div class="form-check">
+        <div class="form-group">
             <label asp-for="Email"></label>
             <input asp-for="Email" class="form-control">
+            <span asp-validation-for="Email" class="text-danger"></span>
+
         </div>
-         <div class="form-check">
+         <div class="form-group">
             <label asp-for="FINCode"></label>
             <input asp-for="FINCode" class="form-control">
+            <span asp-validation-for="FINCode" class="text-danger"></span>
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
