@@ -1,26 +1,28 @@
-﻿namespace management.Employees.ViewModels
-{
-    //public class BaseViewModel
-    //{
-    //    public string Name { get; set; }
-    //    public string LastName { get; set; }
-    //    public string FatherName { get; set; }
-    //    public string EmployeeCode { get; set; }
-    //    public DateTime CreatedAt { get; set; }
-    //    public BaseViewModel(string name, string lastName, string fatherName, string employeeCode, DateTime createdAt)
-    //    {
-    //        Name = name;
-    //        LastName = lastName;
-    //        FatherName = fatherName;
-    //        EmployeeCode = employeeCode;
-    //        CreatedAt = createdAt;
-    //    }
+﻿using System.ComponentModel.DataAnnotations;
 
-    //    public BaseViewModel(string name, string lastName, string fatherName)
-    //    {
-    //        Name = name;
-    //        LastName = lastName;
-    //        FatherName = fatherName;
-    //    }
-    //}
+namespace management.Employees.ViewModels
+{
+    public class BaseViewModel
+    {
+
+        [RegularExpression(@"[A-Za-z]{3,20}", ErrorMessage = "Some Things is Incorrect Please Check Lenght and Other things")]
+        [Required]
+        public string Name { get; set; }
+        [RegularExpression(@"[A-Za-z]{3,20}", ErrorMessage = "Some Things is Incorrect Please Check Lenght and Other things")]
+        [Required]
+        public string LastName { get; set; }
+        [RegularExpression(@"[A-Za-z]{3,20}", ErrorMessage = "Some Things is Incorrect Please Check Lenght and Other things")]
+        [Required]
+        public string FatherName { get; set; }
+        public BaseViewModel(string name, string lastName, string fatherName)
+        {
+            Name = name;
+            LastName = lastName;
+            FatherName = fatherName;
+        }
+        public BaseViewModel()
+        {
+
+        }
+    }
 }

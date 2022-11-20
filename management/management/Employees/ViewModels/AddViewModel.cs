@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace management.Employees.ViewModels
 {
-    public class AddViewModel  /*BaseViewModel*/
+    public class AddViewModel : BaseViewModel
     {
         //public string Email { get; set; }
         //public string FINCode { get; set; }
@@ -15,15 +15,7 @@ namespace management.Employees.ViewModels
 
         //}
 
-        [RegularExpression(@"[A-Za-z]{3,20}", ErrorMessage = "Some Things is Incorrect Please Check Lenght and Other things")]
-        [Required]
-        public string Name { get; set; }
-        [RegularExpression(@"[A-Za-z]{3,20}", ErrorMessage = "Some Things is Incorrect Please Check Lenght and Other things")]
-        [Required]
-        public string LastName { get; set; }
-        [RegularExpression(@"[A-Za-z]{3,20}", ErrorMessage = "Some Things is Incorrect Please Check Lenght and Other things")]
-        [Required]
-        public string FatherName { get; set; }
+    
         [Required]
         [EmailAddress]
         [DataType(DataType.EmailAddress)]
@@ -35,10 +27,8 @@ namespace management.Employees.ViewModels
         public string FINCode { get; set; }
 
         public AddViewModel(string name,string lastname,string fathername,string email,string fincode)
+            : base(name, lastname, fathername)
         {
-            Name = name;
-            LastName = lastname;
-            FatherName = fathername;
             Email = email;
             FINCode=fincode;
 
