@@ -20,6 +20,7 @@ namespace management.Employees.Controllers
                .ToList();
 
 
+
             return View("~/Employees/Views/v_Employe/List.cshtml", employee);
 
 
@@ -30,7 +31,7 @@ namespace management.Employees.Controllers
             return View("~/Employees/Views/v_Employe/Add.cshtml");
         }
         [HttpPost("add", Name = "Employee-add-model")]
-        public IActionResult Add(AddViewModel Employee)
+        public IActionResult Add([FromForm]AddViewModel Employee)
         {
             using DataContext context = new DataContext();
             var employee = context.Employees
@@ -50,6 +51,7 @@ namespace management.Employees.Controllers
                 Email = Employee.Email,
                 FatherName = Employee.FatherName,
             });
+
             context.SaveChanges();
             return RedirectToRoute("Employee-list");
         }
@@ -57,7 +59,7 @@ namespace management.Employees.Controllers
 
 
         [HttpGet("Delete/{EmployeeCode}", Name = "Employee-Delete-id")]
-        public IActionResult Delete(string EmployeeCode)
+        public IActionResult Delete([FromRoute]string EmployeeCode)
         {
             using DataContext context = new DataContext();
             var employee = context.Employees.FirstOrDefault(e => e.EmployeeCode == EmployeeCode);
@@ -72,7 +74,7 @@ namespace management.Employees.Controllers
         }
 
         [HttpGet("update/{EmployeeCode}", Name = "Employee-update-id")]
-        public IActionResult Update(string EmployeeCode)
+        public IActionResult Update([FromForm] string EmployeeCode)
         {
             using DataContext context = new DataContext();
             var Employee = context.Employees.FirstOrDefault(e => e.EmployeeCode == EmployeeCode);
@@ -91,7 +93,7 @@ namespace management.Employees.Controllers
             });
         }
         [HttpPost("update/{EmployeeCode}", Name = "Employee-update")]
-        public IActionResult Update(UpdateViewModel model)
+        public IActionResult Update([FromForm] UpdateViewModel model)
         {
             using DataContext context = new DataContext();
             var Employee = context.Employees.FirstOrDefault(e => e.EmployeeCode == model.EmployeeCode);
