@@ -1,4 +1,4 @@
-namespace management
+namespace Manag
 {
     public class Program
     {
@@ -7,8 +7,8 @@ namespace management
             var builder = WebApplication.CreateBuilder(args);
             builder.Services
                 .AddMvc();
-                
-            
+
+
 
             var app = builder.Build();
 
@@ -16,12 +16,11 @@ namespace management
 
             app.MapControllerRoute(
                 name: "default",
-                pattern: "{controller=employee}/{action=list}");
-        
+                pattern: "{controller=Employee}/{action=List}");
 
-           
-         
-         
+
+
+
 
             app.Run();
         }

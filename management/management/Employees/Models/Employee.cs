@@ -1,11 +1,11 @@
-﻿using management.Employees.Models.Common;
-using System;
+﻿using System;
 
 namespace management.Employees.Models
 {
-    public class Employee : Entity<int>
+    public class Employee 
     {
-       
+
+        public int Id { get; set; }
         public string Name { get; set; }
         public string LastName { get; set; }
         public string FatherName { get; set; }

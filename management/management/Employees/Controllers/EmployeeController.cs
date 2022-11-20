@@ -7,11 +7,14 @@ using Microsoft.EntityFrameworkCore;
 
 namespace management.Employees.Controllers
 {
-    [Route("Employee")]
+    [Route("/Employee")]
     public class EmployeeController : Controller
+
     {
+        [Route("")]
         [HttpGet("List", Name = "Employee-list")]
-        public IActionResult List()
+        [Route("~/")]
+        public virtual IActionResult List()
         {
             using DataContext context = new DataContext();
 
@@ -74,7 +77,7 @@ namespace management.Employees.Controllers
         }
 
         [HttpGet("update/{EmployeeCode}", Name = "Employee-update-id")]
-        public IActionResult Update([FromForm] string EmployeeCode)
+        public IActionResult Update( string EmployeeCode)
         {
             using DataContext context = new DataContext();
             var Employee = context.Employees.FirstOrDefault(e => e.EmployeeCode == EmployeeCode);

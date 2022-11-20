@@ -3,7 +3,7 @@
 <div class="container">
     <div class="row justify-content-end">
         <div class="">
-            <a asp-route="Employee-Add" target="_blank" class="btn btn-secondary">Add new book</a>
+            <a asp-route="Employee-Add" target="_blank" class="btn btn-secondary">Add new Employee</a>
            
         </div>
     </div>
@@ -31,8 +31,7 @@
                           <td>@employee.CreatedAt</td>
 
                         <td class="d-flex justify-content-between">
-                        @*    <a asp-route="enbook-details" asp-route-id="@book.id" class="col-3 btn btn-primary">details</a>*@
-                            <a asp-route="Employee-update-id" asp-route-EmployeeCode="@employee.EmployeCode" class="col-3 btn btn-secondary">update</a>
+                            <a asp-route="Employee-update-id" asp-route-EmployeeCode="@employee.EmployeCode" class="col-3 btn btn-secondary">Update</a>
                             <a  asp-route="Employee-Delete-id" asp-route-EmployeeCode="@employee.EmployeCode"  class="col-3 btn btn-danger">Delete</a>
                         </td>
                     </tr>
