@@ -77,7 +77,7 @@ namespace management.Employees.Controllers
         }
 
         [HttpGet("update/{EmployeeCode}", Name = "Employee-update-id")]
-        public IActionResult Update( string EmployeeCode)
+        public IActionResult Update([FromRoute] string EmployeeCode)
         {
             using DataContext context = new DataContext();
             var Employee = context.Employees.FirstOrDefault(e => e.EmployeeCode == EmployeeCode);
