@@ -1,8 +1,7 @@
-﻿
-using management.Employees.Models;
+﻿using management.Employees.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace management.Employees.Contexts
+namespace management.Contexts
 {
     public class DataContext : DbContext
     {
@@ -10,6 +9,6 @@ namespace management.Employees.Contexts
         {
             optionsBuilder.UseSqlServer("Server=DESKTOP-GHFALKV;Database=CodeAcademy;Trusted_Connection=True;TrustServerCertificate=True;");
         }
-       public DbSet<Employee> Employees { get; set; }
+        public DbSet<Employee> Employees { get; set; }
     }
 }
