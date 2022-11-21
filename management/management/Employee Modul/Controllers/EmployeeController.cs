@@ -24,14 +24,14 @@ namespace management.Employees.Controllers
 
 
 
-            return View("~/Employees/Views/v_Employe/List.cshtml", employee);
+            return View("~/Employee Modul/Views/v_Employe/List.cshtml", employee);
 
 
         }
         [HttpGet("add", Name = "Employee-add")]
         public IActionResult Add()
         {
-            return View("~/Employees/Views/v_Employe/Add.cshtml");
+            return View("~/Employee Modul/Views/v_Employe/Add.cshtml");
         }
         [HttpPost("add", Name = "Employee-add-model")]
         public IActionResult Add([FromForm]AddViewModel Employee)
@@ -42,7 +42,7 @@ namespace management.Employees.Controllers
               .ToList();
             if (!ModelState.IsValid)
             {
-                return View("~/Employees/Views/v_Employe/Add.cshtml", Employee);
+                return View("~/Employee Modul/Views/v_Employe/Add.cshtml", Employee);
             }
 
             context.Employees.Add(new Employee
@@ -86,7 +86,7 @@ namespace management.Employees.Controllers
                 return NotFound();
             }
 
-            return View("~/employees/Views/v_Employe/Update.cshtml", new UpdateViewModel
+            return View("~/Employee Modul/Views/v_Employe/Update.cshtml", new UpdateViewModel
             {
                 Name = Employee.Name,
                 LastName = Employee.LastName,
@@ -106,7 +106,7 @@ namespace management.Employees.Controllers
             }
             if (!ModelState.IsValid)
             {
-                return View("~/employees/Views/v_Employe/Update.cshtml",model);
+                return View("~/Employee Modul/Views/v_Employe/Update.cshtml", model);
             }
 
             Employee.Name = model.Name;
