@@ -19,6 +19,7 @@ namespace management.Employees.Controllers
             using DataContext context = new DataContext();
 
             var employee = context.Employees
+                .Where(e=> !e.Soft)
                .Select(e => new ListViewModel(e.EmployeeCode, e.Name, e.LastName, e.FatherName, e.CreatedAt, e.Soft))
                .ToList();
 
