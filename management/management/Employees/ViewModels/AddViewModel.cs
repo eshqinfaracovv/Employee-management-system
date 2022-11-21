@@ -1,4 +1,4 @@
-﻿using management.Utilities;
+﻿using management.Atrributs;
 using System.ComponentModel.DataAnnotations;
 
 namespace management.Employees.ViewModels

@@ -1,6 +1,6 @@
 ﻿using management.Contexts;
 
-namespace management.Employees.EmployeeCodeGenerate
+namespace management.Employees.Utilities
 {
     public class TableAutoGenerateEmployeeCode
     {

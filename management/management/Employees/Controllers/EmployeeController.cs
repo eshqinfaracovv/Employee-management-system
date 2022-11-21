@@ -1,6 +1,6 @@
 ﻿using management.Contexts;
-using management.Employees.EmployeeCodeGenerate;
 using management.Employees.Models;
+using management.Employees.Utilities;
 using management.Employees.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
